@@ -4400,6 +4400,8 @@ $_authorizations_map"
           return 1
         fi
 
+        # curl -T $wellknown_path/$token ftp://$ftp_server/$ftp_base/.well-known/acme-challenge/ --user $ftp_user:ftp_pw
+
         if [ ! "$usingApache" ]; then
           if webroot_owner=$(_stat "$_currentRoot"); then
             _debug "Changing owner/group of .well-known to $webroot_owner"
